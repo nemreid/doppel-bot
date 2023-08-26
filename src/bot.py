@@ -207,6 +207,9 @@ def _asgi_app():
     return fastapi_app
 
 
+def additional_new_function():
+    print("goodbye cruel world")
+
 @stub.function(
     image=stub.slack_image,
     # TODO: Modal should support optional secrets.
