@@ -2,8 +2,11 @@ name: main
 
 on:
   pull_request:
+    types: [opened, synchronize]
 
 jobs:
   review:
-    name: pierre-review
-    uses: aummo/pierre-review@0.0.2
+    runs-on: ubuntu-latest
+    steps:
+      - name: pierre-review
+        uses: aummo/pierre-review@0.0.2
