@@ -40,6 +40,13 @@ def delete_user(team_id: str, user: str):
         cur.execute(f"DELETE FROM users WHERE team_id = '{team_id}' AND handle = '{user}'")
         conn.commit()
 
+def delete_all_users(team_id: str):
+    # muahahaha 😈
+    with psycopg2.connect() as conn:
+        cur = conn.cursor()
+        cur.execute(f"DELETE FROM users WHERE team_id = '{team_id}'")
+        conn.commit()
+
 
 @stub.function(
     image=stub.slack_image,
