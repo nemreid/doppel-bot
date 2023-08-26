@@ -215,7 +215,7 @@ def _asgi_app():
     timeout=60 * 60 * 4,
 )
 def user_pipeline(team_id: str, token: str, user: str, respond):
-    from .db import insert_user, update_state, delete_user
+    from .db import insert_user, update_state, delete_user, delete_all_users
 
     try:
         if MULTI_WORKSPACE_SLACK_APP:
@@ -240,5 +240,5 @@ def user_pipeline(team_id: str, token: str, user: str, respond):
     except Exception as e:
         respond(text=f"Failed to train {user} ({e}). Try again in a bit!")
         if MULTI_WORKSPACE_SLACK_APP:
-            delete_user(team_id, user)
+            delete_all_users(team_id)
         raise e
