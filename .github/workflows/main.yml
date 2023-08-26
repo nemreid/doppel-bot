@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pierre-review
-        uses: aummo/pierre-review@0.0.2
+        uses: aummo/pierre-review@0.0.3
