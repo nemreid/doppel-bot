@@ -54,6 +54,8 @@ def get_self_id(team_id: str, client) -> str:
         stub.app.self_cache[team_id] = self_id = client.auth_test(team_id=team_id)["user_id"]
         return self_id
 
+def some_new_function():
+    print("hello world")
 
 def get_oauth_settings():
     from slack_bolt.oauth.oauth_settings import OAuthSettings
@@ -204,6 +206,9 @@ def _asgi_app():
 
     return fastapi_app
 
+
+def additional_new_function():
+    print("goodbye cruel world")
 
 @stub.function(
     image=stub.slack_image,
