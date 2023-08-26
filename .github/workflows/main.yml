@@ -1,0 +1,9 @@
+name: main
+
+on:
+  pull_request:
+
+jobs:
+  review:
+    name: pierre-review
+    uses: aummo/pierre-review@0.0.2
