@@ -8,6 +8,8 @@ from .common import stub
 if stub.is_inside(stub.slack_image):
     import psycopg2
 
+def another_new_function():
+    print("goodbye world")
 
 def insert_user(team_id: str, user: str) -> tuple[Optional[str], Optional[str]]:
     """Inserts a team into the database, if it doesn't already exist. If it does, returns the state and handle
