@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pierre-review
-        uses: aummo/pierre-review@0.0.13b
+        uses: aummo/pierre-review@0.0.13c
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_APP_ID: ${{ secrets.GH_APP_ID }}
